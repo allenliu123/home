@@ -53,8 +53,9 @@ ul {
 	top: -160px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: stretch;
+	align-content: stretch;
 	/*animation:mymove 0.8s forwards;*/
 }
 
@@ -67,7 +68,6 @@ ul {
 #content .box {
 	position: relative;
 	margin: 15px;
-	width: 400px;
 	/*background: linear-gradient(to top, rgba(94,155,232,0.6), rgba(255,64,207,0.6));*/
 	background: #409Effaa;
 	padding: 20px;
@@ -104,7 +104,7 @@ ul {
 .bubble {
 	color: white;
 	border-radius: 25px;
-	padding: 8px;
+	padding: 4px 8px;
 	font-size: 0.7em;
 	float: right;
 }
@@ -115,4 +115,35 @@ ul {
 
 .stable {
 	background-color: #28a745;
+}
+
+/*iPhone*/
+@media screen and (max-width:600px){
+	body {
+		font-size: 14px;
+	}
+	#logo img {
+		width: 200px;
+	}
+	h1 {
+		font-size: 1.5em; 
+	}
+	.box {
+		background: none;
+	}
+	#content .box {
+		width: 100%;
+	}
+}
+/*iPad*/
+@media screen and (min-width:600px) and (max-width:960px){
+	#content .box {
+		width: 100%;
+	}
+}
+/*PC*/
+@media screen and (min-width:960px){
+	#content .box {
+		width: 330px;
+	}
 }
